@@ -1,0 +1,13 @@
+docker -- version
+docker run -d -p 80:80 nginx
+docker ps -a
+docker run -d -e MYSQL_ROOT_PASSWORD=adm mysql
+docker ps
+docker inspect c370
+docker logs c370
+docker inspect 6f01
+docker logs c370
+mysql -h 172.17.0.3 -uroot -p
+docker network create rede_cloud
+docker run -it --network rede_cloud -p 80:80 nginx
+docker run -it --network rede_cloud -p 3306 mysql
